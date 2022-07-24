@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.login {
+    background-color: rgb(248, 68, 100);
+    margin-right: 2%;
+    color: white;
+}
+
+.page-content {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.banner{
+    width: -webkit-fill-available;
+    height: 20%;
+    max-height: 400px;
+
+}
+
+.movie-card{
+margin-top: 2%;
+}
+
+.footer{
+    background-color: #383E58;
+    color: white;
+    text-align: center;
+}
