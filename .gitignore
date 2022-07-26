@@ -125,3 +125,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+/Front-end/motion-pictures/.angular/cache/14.0.6
+/.vs
+/Back-end/MovieStoreApi/obj
+/Back-end/MovieStoreApi/bin/Debug/net6.0
+/Back-end/MovieStoreApi/.vs

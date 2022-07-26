@@ -19,8 +19,7 @@ export class MovieListComponent implements OnInit {
       .getMovies()
       .then(movies => {
         console.log(movies);
-        
-        // this.movies = students as any[];
+        this.movies = movies as any[];
       });
   }
 

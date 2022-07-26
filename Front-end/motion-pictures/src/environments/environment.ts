@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://ergast.com/api/f1/2004/1/results.json'
-
+  //apiURL: 'http://ergast.com/api/f1/2004/1/results.json'
+  apiURL:'https://localhost:7145'
 };
 
 /*

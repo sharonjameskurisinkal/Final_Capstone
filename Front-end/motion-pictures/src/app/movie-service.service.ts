@@ -10,7 +10,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
   getMovies(): Promise<void | any[]> {
-    return this.http.get(this.apiUrl)
+    return this.http.get(this.apiUrl+'/api/movies')
       .toPromise()
       .then(response => response as any[])
       .catch(this.handleError);
