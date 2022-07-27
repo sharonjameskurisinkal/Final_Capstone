@@ -18,5 +18,6 @@ namespace MovieStoreApi.Models
         public string rating { get; set; } = null!;
         public string release_date { get; set; } = null!;
         public List<Theatre> theatres { get; set; }
+        public string description { get; set; } = null!;
     }
 }
