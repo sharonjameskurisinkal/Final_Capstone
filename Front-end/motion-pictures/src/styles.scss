@@ -2,9 +2,14 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .login {
-    background-color: rgb(248, 68, 100);
-    margin-right: 2%;
-    color: white;
+  background-color: rgb(248, 68, 100);
+  margin-right: 2%;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 6px;
 }
 
 .page-content {
@@ -12,16 +17,22 @@
     margin-left: 2%;
 }
 
+.toolbar{
+    height:85px !important;
+    font-size:18px;
+
+}
 .banner{
     width: -webkit-fill-available;
     height: 20%;
-    max-height: 400px;
+    max-height: 515px;
 
 }
 
 .movie-card{
 margin-top: 4%;
 cursor: pointer;
+margin:auto;
 }
 
 .footer{
@@ -39,3 +50,424 @@ cursor: pointer;
     cursor: pointer;
     color: white !important;
 }
+.main-heading{
+    color:#ffff;
+}
+.card-img, .card-img-top, .card-img-bottom{
+height:385px;
+}
+/*detail Page*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  background: black;
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.movie-nav:hover {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding:10px;
+}
+.book-button{
+    text-align:center;
+}
+
+.movie_card {
+  position: relative;
+  display: block;
+  max-width: 1320px;
+  height: 500px;
+  margin: 100px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.4s;
+  }
+
+  .info_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+
+    .movie_header {
+      position: relative;
+      padding: 25px;
+      height: 40%;
+
+      h1 {
+        color: #fff;
+        font-weight: 400;
+      }
+
+      h4 {
+        color: #9ac7fa;
+        font-weight: 400;
+      }
+
+      h3 {
+        color: #fff!important;
+      }
+
+      .minutes {
+        display: inline-block;
+        margin-top: 10px;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba(255,255,255,0.13);
+      }
+
+      .type {
+        display: inline-block;
+        color: #cee4fd;
+        margin-left: 10px;
+      }
+
+      .locandina {
+        position: relative;
+        float: left;
+        margin-right: 20px;
+        height: 120px;
+        box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
+      }
+    }
+
+    .movie_desc {
+      padding: 25px;
+      height: 50%;
+
+      .text {
+        color: #cfd6e1;
+      }
+    }
+
+    .movie_social {
+      height: 10%;
+      padding-left: 15px;
+      padding-bottom: 20px;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          color: rgba(255,255,255,0.4);
+          transition: color 0.3s;
+          transition-delay: 0.15s;
+          margin: 0 10px;
+
+          &:hover {
+            transition: color 0.3s;
+            color: rgba(255,255,255,0.8);
+          }
+
+          i {
+            font-size: 19px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .blur_back {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    right: 0;
+    background-size: cover;
+    border-radius: 11px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .movie_header {
+    width: 60%;
+  }
+
+  .movie_desc {
+    width: 50%;
+  }
+
+  .info_section {
+    background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+  }
+
+  .blur_back {
+    width: 80%;
+    background-position: -100% 10% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie_card {
+    width: 95%;
+    margin: 70px auto;
+    min-height: 350px;
+    height: auto;
+  }
+
+  .blur_back {
+    width: 100%;
+    background-position: 50% 50% !important;
+  }
+
+  .movie_header {
+    width: 100%;
+    margin-top: 85px;
+  }
+
+  .movie_desc {
+    width: 100%;
+  }
+
+  .info_section {
+    background: linear-gradient(to top, rgb(20, 20, 19) 50%, transparent 100%);
+    display: inline-grid;
+  }
+}
+
+
+#bright {
+  box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+
+  &:hover {
+    box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+  }
+}
+
+.bright_back {
+  background: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
+}
+
+#tomb {
+  box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
+
+  &:hover {
+    box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
+  }
+}
+
+.tomb_back {
+  background: url("/assets/movies/thorbackground.jpg");
+}
+
+#ave {
+  box-shadow: 0px 0px 150px -45px rgba(199,147,75, 0.7);
+  margin-bottom: 200px;
+
+  &:hover {
+    box-shadow: 0px 0px 120px -55px rgba(199,147,75, 0.7);
+  }
+}
+
+.ave_back {
+  background: url("https://www.gannett-cdn.com/-mm-/c03fd140debe8ad4c05cf81a5cad7ad61a12ce52/c=0-1580-2985-3266&r=x803&c=1600x800/local/-/media/2017/06/09/USATODAY/USATODAY/636326272873599176-Black-Panther-Teaser.jpg");
+}
+
+
+/*End details style*/
+
+/*footer*/
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  max-width: 200px;
+}
+
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #7e7e7e;
+  line-height: 28px;
+}
+
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+
+.facebook-bg {
+  background: #3B5998;
+}
+
+.twitter-bg {
+  background: #55ACEE;
+}
+
+.google-bg {
+  background: #DD4B39;
+}
+
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+
+.footer-widget ul li a:hover {
+  color: #ff5e14;
+}
+
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+
+.subscribe-form button {
+  position: absolute;
+  right: 0;
+  background: #f84464;
+  padding: 25px 20px;
+  border: 1px solid #f84464;
+  top: 0;
+}
+
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+
+.copyright-area {
+  background: #202020;
+  padding: 25px 0;
+}
+
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+
+.copyright-text p a {
+  color: #ff5e14;
+}
+
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer-menu li:hover a {
+  color: #ff5e14;
+}
+
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+/*end footer*/

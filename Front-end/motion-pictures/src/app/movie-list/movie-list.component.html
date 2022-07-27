@@ -1,32 +1,26 @@
 <img class="banner" src="../../assets/images/offer2.jpg">
 <div class="page-content">
-  <h3>Movies in Ontario</h3>
+
   <div class="container">
     <div class="row">
 
-     
-      
-          <div class="col-lg-3 col-md-4" *ngFor="let movie of movies;">
-            <div class="card movie-card" style="width: 18rem;" (click)="navigate()">
-              <img class="card-img-top" src="{{movie.image}}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">{{movie.name}}</h5>
-                
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{movie.rating}}</li>
-                <li class="list-group-item">{{movie.duration}}</li>
-                <li class="list-group-item">{{movie.release_date}}</li>
-              </ul>
-              <div class="card-body">
-                <button type="button" class="login btn btn-sm">Book Now</button>
-              </div>
-            </div>
-          </div>
-        
-   
+      <h1 class="main-heading">Movies in Ontario</h1>
 
+      <div class="col-lg-3 col-md-4" *ngFor="let movie of movies;">
+        <div class="card movie-card" style="width: 20rem;" routerLink="/movie-details">
+          <img class="card-img-top" src="{{movie.image}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{movie.name}}</h5>
+
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{movie.rating}}</li>
+            <li class="list-group-item">
+              <span *ngFor="let language of movie.languages;">{{language}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>
