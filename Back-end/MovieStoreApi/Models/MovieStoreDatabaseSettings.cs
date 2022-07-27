@@ -7,5 +7,6 @@
         public string DatabaseName { get; set; } = null!;
 
         public string MoviesCollectionName { get; set; } = null!;
+        public string AdminsCollectionName { get; set; } = null!;
     }
 }
