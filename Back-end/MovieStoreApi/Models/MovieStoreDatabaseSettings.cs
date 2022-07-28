@@ -8,5 +8,6 @@
 
         public string MoviesCollectionName { get; set; } = null!;
         public string AdminsCollectionName { get; set; } = null!;
+        public string BookingsCollectionName { get; set; } = null!;
     }
 }

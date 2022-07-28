@@ -7,11 +7,13 @@ builder.Services.Configure<MovieStoreDatabaseSettings>(
 builder.Configuration.GetSection("MovieStoreDatabase"));
 builder.Services.AddTransient<MovieService>();
 builder.Services.AddSingleton<MovieDao>();
+builder.Services.AddSingleton<BookingDao>();
 
 // Add services to the container.
 builder.Services.AddCors();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<BookingService>();
 builder.Services.AddSingleton<AdminDao>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
