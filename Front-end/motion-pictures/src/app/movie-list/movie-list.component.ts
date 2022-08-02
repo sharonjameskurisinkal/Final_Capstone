@@ -24,8 +24,9 @@ export class MovieListComponent implements OnInit {
   }
 
 
-  navigate(){
-    this.router.navigateByUrl('movie-details');
+  navigate(id?:Number){
+    console.log(id);
+    this.router.navigate(['movie-details'], {queryParams: {id:id}});
 
   }
 

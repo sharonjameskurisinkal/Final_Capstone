@@ -16,6 +16,13 @@ export class MovieService {
       .catch(this.handleError);
   }
 
+  getMovieDetail(id:string): Promise<void | any[]> {
+    return this.http.get(this.apiUrl+'/api/movies/'+id)
+      .toPromise()
+      .then(response => response as any[])
+      .catch(this.handleError);
+  }
+
   private handleError(error: any) {
     console.log("error");
   }
