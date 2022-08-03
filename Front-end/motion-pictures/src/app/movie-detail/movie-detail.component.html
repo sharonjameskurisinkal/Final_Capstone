@@ -2,15 +2,15 @@
 <div class="movie_card" id="tomb">
   <div class="info_section">
     <div class="movie_header">
-      <img class="locandina" src="../../assets/movies/thor.jpg" />
-      <h1>Thor: Love and Thunder<span> (UA)</span></h1>
-      <h4>7 Jul, 2022</h4>
-      <span class="minutes">1h 59m</span>
-      <p class="type">Action,Adventure,Fantasy</p>
+      <img class="locandina" [src]="movieDetail?.image" />
+      <h1>{{movieDetail?.name}}<span> {{movieDetail?.rating}}</span></h1>
+      <h4>{{movieDetail?.release_date}}</h4>
+      <span class="minutes">{{movieDetail?.duration}}</span>
+      <p class="type" *ngFor="let gen of movieDetail?.genre;let i = index" ><span *ngIf="i !== 0">, </span>{{gen}} </p>
     </div>
     <div class="movie_desc">
       <p class="text">
-        Thor embarks on a journey unlike anything he`s ever faced, a quest for inner peace. However, his retirement gets interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods.</p>
+       {{movieDetail?.description}}</p>
     </div>
     <div class="movie_social">
       <div class="card-body book-button">
