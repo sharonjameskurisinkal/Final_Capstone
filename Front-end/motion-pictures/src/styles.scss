@@ -35,6 +35,9 @@ cursor: pointer;
 margin:auto;
 }
 
+.list-card {
+  margin-bottom: 25px;
+}
 .footer{
     background-color: #383E58;
     color: white;
@@ -221,8 +224,15 @@ html, body {
     margin: 70px auto;
     min-height: 350px;
     height: auto;
+    
   }
 
+  .movie-card {
+    width: 20rem !important;
+  }
+  .main-heading{
+      text-align:center;
+  }
   .blur_back {
     width: 100%;
     background-position: 50% 50% !important;
