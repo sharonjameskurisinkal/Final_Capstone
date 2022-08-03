@@ -6,7 +6,7 @@
 
       <h1 class="main-heading">Movies in Ontario</h1>
 
-      <div class="col-lg-3 col-md-4 list-card"" *ngFor="let movie of movies;">
+      <div class="col-lg-3 col-md-4 list-card" *ngFor="let movie of movies;">
         <div class="card movie-card" (click)="navigate(movie.id)">
           <img class="card-img-top" src="{{movie.image}}" alt="Card image cap">
           <div class="card-body">
