@@ -1,0 +1,90 @@
+.theatre-ul {
+  list-style: none;
+}
+
+.theatre-li {
+  display:flex;
+  flex-direction:row;
+}
+
+.theatre{
+    width:27%;
+    color:white;
+
+}
+
+.theatre-name{
+    display:flex;
+}
+
+.theatre-details {
+  display: flex;
+}
+.ticket-info {
+
+}
+.food-info {
+  
+}
+
+.show-times{
+    width:70%;
+    display:flex;
+    flex-direction:column;
+}
+
+.show-times-ul{
+    list-style:none;
+    display:flex;
+}
+
+.show-times-li {
+  width: 14%;
+  padding: 0px 10px 0px 0px;
+  color: white;
+}
+.time {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 10px;
+  background: black;
+  color: white;
+}
+
+
+.show-seat {
+  display: none;
+}
+
+.time:hover + .show-seat {
+  display: block;
+  color: #f84464;
+}
+
+.popup-ul {
+  list-style: none;
+  display: flex;
+}
+
+.popup-li {
+  padding: 0px 10px 0px 0px;
+  font-size:10px;
+  text-align:center;
+  
+}
+
+#selection-container{
+   // display:flex;
+   display:none;
+}
+
+.selection {
+  display: flex;
+  flex-direction:column;
+  color:white;
+}
+
+.selection input{
+    width: 40%;
+    height: 50%;
+}

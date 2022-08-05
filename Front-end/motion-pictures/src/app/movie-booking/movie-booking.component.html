@@ -1,1 +1,80 @@
-<p>movie-booking works!</p>
+
+<div class="page-content">
+
+  <div class="container">
+    <div class="row">
+
+      <div style="padding-top:50px">
+        <ul class="theatre-ul">
+          <li class="theatre-li">
+            <div class="theatre">
+              <div class="theatre-name">
+                <h4>Theatre name</h4>
+              </div>
+              <div class="theatre-details">
+                <div class="ticket-info">Ticket info</div>
+                <div class="food-info">Food info</div>
+              </div>
+            </div>
+
+            <div class="show-times">
+              <ul class="show-times-ul">
+                <li class="show-times-li">
+                  <div class="time">  9:45 AM</div>
+                  <div class="show-seat"> test</div>
+
+                </li>
+                <li class="show-times-li">
+                  <button class="time"  id="time" value="10:45 AM">10:45 AM</button>
+                  <div class="show-seat">
+                    <ul class="popup-ul">
+                      <li class="popup-li">
+                        <div class="price"> CAD 90</div>
+                        <div class="seat-type"> Platinum</div>
+                        <div class="seat-availability"> Available</div>
+                      </li>
+                      <li class="popup-li">
+                        <div class="price"> CAD 90</div>
+                        <div class="seat-type"> Platinum</div>
+                        <div class="seat-availability"> Available</div>
+                      </li>
+                      <li class="popup-li">
+                        <div class="price"> CAD 90</div>
+                        <div class="seat-type"> Platinum</div>
+                        <div class="seat-availability"> Available</div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+            <div class="selection-container" id="selection-container">
+              <div class="selection">
+                <label>Platinum</label>
+                <input type="number" max="10" />
+              </div>
+              <div class="selection">
+                <label>Platinum</label>
+                <input type="number" max="10" />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  const targetDiv = document.getElementById("selection-container");
+    const btn = document.getElementById("time");
+  btn.onclick = function () {
+    console.log("testttttt");
+        targetDiv.style.display = "flex";
+      
+    };
+</script>
