@@ -10,8 +10,9 @@
 .theatre{
     width:27%;
     color:white;
-
+    
 }
+
 
 .theatre-name{
     display:flex;
@@ -54,11 +55,13 @@
 
 .show-seat {
   display: none;
+ 
 }
 
 .time:hover + .show-seat {
   display: block;
   color: #f84464;
+ 
 }
 
 .popup-ul {
@@ -74,8 +77,8 @@
 }
 
 #selection-container{
-   // display:flex;
-   display:none;
+    display:flex;
+  // display:none;
 }
 
 .selection {
