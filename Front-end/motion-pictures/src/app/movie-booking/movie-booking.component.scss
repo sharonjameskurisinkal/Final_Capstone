@@ -5,10 +5,11 @@
 .theatre-li {
   display:flex;
   flex-direction:row;
+  margin-top:30px;
 }
 
 .theatre{
-    width:27%;
+   /* width:27%;*/
     color:white;
     
 }
@@ -40,7 +41,7 @@
 }
 
 .show-times-li {
-  width: 14%;
+ /* width: 14%;*/
   padding: 0px 10px 0px 0px;
   color: white;
 }
@@ -91,3 +92,39 @@
     width: 40%;
     height: 50%;
 }
+
+
+.pay-button{
+    margin:auto;
+}
+@media screen and (max-width: 992px) {
+
+  .show-times-li {
+    margin-right: 25px;
+    width: 91px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .theatre-li {
+    display: flex;
+    flex-direction: column;
+
+    .show-times-li {
+      width: 91px;
+    }
+  }
+
+  .show-times-li {
+    width: 91px;
+  }
+  .theatre-container{
+      display:flex;
+      justify-content:center;
+  }
+
+  .theatre-details{
+      padding-bottom:20px;
+  }
+    }
+

@@ -6,18 +6,20 @@
       <h1>{{movieDetail?.name}}<span> {{movieDetail?.rating}}</span></h1>
       <h4>{{movieDetail?.release_date}}</h4>
       <span class="minutes">{{movieDetail?.duration}}</span>
-      <p class="type" *ngFor="let gen of movieDetail?.genre;let i = index" ><span *ngIf="i !== 0">, </span>{{gen}} </p>
+      <p class="type" *ngFor="let gen of movieDetail?.genre;let i = index"><span *ngIf="i !== 0">, </span>{{gen}} </p>
     </div>
     <div class="movie_desc">
       <p class="text">
-       {{movieDetail?.description}}</p>
+        {{movieDetail?.description}}
+      </p>
     </div>
     <div class="movie_social">
       <div class="card-body book-button">
-            <button type="button" class="login btn btn-sm" routerLink="/booking">Book Now</button>
-          </div>
+        <button type="button" class="login btn btn-sm" routerLink="/booking">Book Now</button>
+      </div>
     </div>
   </div>
-  <div class="blur_back tomb_back"></div>
+  <div class="blur_back tomb_back" style="background: url({{movieDetail?.background_image}}) !important; "></div>
+
 </div>
 
