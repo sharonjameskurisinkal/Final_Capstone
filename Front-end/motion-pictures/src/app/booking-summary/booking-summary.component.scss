@@ -12,6 +12,7 @@
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 5%;
+  display: flex;
 }
 
 p {
@@ -21,7 +22,8 @@ p {
 
 .item {
   margin: 5%;
-  color: #6c757d
+  color: #6c757d;
+  font-size: 20px;
 }
 
 .heading1 {
@@ -34,11 +36,13 @@ p {
 .text1 {
   color: white;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .total {
   margin: 5%;
   color: white;
+  font-size: 20px;
 }
 
 .totalText {
@@ -54,6 +58,7 @@ p {
 .button-div {
   padding-top: 20px;
   text-align: center;
+  margin-bottom:10px;
 }
 
 input[type=submit] {
@@ -63,9 +68,19 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 20px;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #ff5e14;
 }
+.float-right {
+  float: right !important;
+}
+
+@media screen and (max-width: 768px) {
+  .mainRow {
+    flex-direction:column;
+  }
+
+    }
