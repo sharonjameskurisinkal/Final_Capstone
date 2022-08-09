@@ -11,37 +11,12 @@
 .mainRow {
   margin-left: 10%;
   margin-right: 10%;
+  padding-top: 5%;
 }
 
 p {
   margin: 0px;
 }
-
-.desc {
-  background-color: #f0edeb;
-  margin-top: 5%;
-  margin-left: 0;
-  margin-right: 50px;
-  margin-bottom: 4%;
-}
-
-
-.card-body {
-  padding: 0;
-  margin: 0;
-}
-
-div.card.main {
-  margin: 0px !important;
-}
-
-
-.card {
-  padding: 0 !important;
-  margin-top: 10px;
-}
-
-
 
 
 .item {
@@ -55,58 +30,20 @@ div.card.main {
   color: red;
 }
 
-.heading2 {
-  margin: 5%;
-  margin-top: 15%;
-  font-size: 20px;
-}
-
-
 
 .text1 {
-  color: black;
-  font-weight: 700;
-}
-
-.card-footer {
-  background-color: black;
   color: white;
-}
-
-.purchaseLink {
-  text-decoration: none;
-}
-
-.row1 {
-  font-size: 12px;
-}
-
-.row2 {
-  font-weight: 600;
-}
-
-.subRow {
-  margin-left: 10%;
-  margin-bottom: 2%;
-  margin-top: 5%;
-}
-
-p.cardAndExpireValue, p.nameAndcvcValue {
-  margin: 5%;
-  margin-bottom: 10%;
-  font-weight: 600;
-}
-
-p.nameAndcvc, p.cardAndExpire {
-  margin-bottom: -10px;
+  font-weight: 700;
 }
 
 .total {
   margin: 5%;
+  color: white;
 }
 
 .totalText {
   font-weight: 700;
+  color: white;
 }
 
 .totalText2 {
@@ -114,9 +51,21 @@ p.nameAndcvc, p.cardAndExpire {
   font-size: 30px;
 }
 
-.card-img-top {
-  width: 100%;
-  border-top-left-radius: calc(.25rem - 1px);
-  border-top-right-radius: calc(.25rem - 1px);
-  height: 430px;
+.button-div {
+  padding-top: 20px;
+  text-align: center;
+}
+
+input[type=submit] {
+  background-color: red;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
 }
