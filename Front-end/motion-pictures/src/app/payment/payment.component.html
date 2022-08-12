@@ -1,1 +1,44 @@
-<p>payment works!</p>
+<div class="page-content">
+    <div class="bg">
+      <div class="mainRow">
+        <div class="col-lg-6 col-md-4 col-sm-12">
+            <form>
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start top-margin">
+                  <h2 class="main-heading">Share your Contact Detials </h2>
+                </div>
+      
+               
+      
+                <!-- Email input -->
+                <div class="form-outline mb-4 form-outline-custom">
+                  <input formControlName="email" type="email" id="form3Example3" class="form-control form-control-md width-50"
+                    placeholder="Enter email address" />
+                  <label class="form-label form-label-custom" for="form3Example3">Email address</label>
+                </div>
+      
+                <!-- Phone input -->
+                <div class="form-outline mb-3">
+                  <input formControlName="phone" type="text" id="form3Example4" class="form-control form-control-md width-50"
+                    placeholder="Enter phone number " />
+                  <label class="form-label form-label-custom" for="form3Example4">Phone Number</label>
+                </div>
+      
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button type="button" class="btn login btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="validateCredentials()">Continue to Pay</button>
+                </div>
+      
+              </form>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <h2 class="main-heading summary-head">Booking Summary</h2>
+          <p class="item">Ticket Cost <span class="float-right text1">30</span></p>
+          <p class="item">Convenience Fee<span class="float-right text1">$1,240</span></p>
+          <p class="item">Subtotal<span class="float-right text1">Free</span></p>
+          <p class="item">Promo Code<span class="float-right text1">-$100</span></p>
+          <p class="total"><strong>Total</strong><span class="float-right totalText1">$<span class="totalText2">1,140</span></span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  

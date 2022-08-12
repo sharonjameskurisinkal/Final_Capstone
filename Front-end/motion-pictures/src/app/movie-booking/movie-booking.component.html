@@ -1,5 +1,5 @@
 
-<div class="page-content">
+<div class="page-content min-500">
 
   <div class="container">
     <div class="row">
@@ -7,14 +7,14 @@
 
       <div style="padding-top:90px">
         <div>
-          <h1 class="main-heading">Thor: Love and Thunder UA</h1>
+          <h1 class="main-heading">{{movieDetail.name}}</h1>
         </div>
         <div class="theatre-container">
           <ul class="theatre-ul">
-            <li class="theatre-li">
+            <li *ngFor="let theatre of movieDetail.theatres" class="theatre-li">
               <div class="theatre">
                 <div class="theatre-name">
-                  <h4>Cineplex Waterloo</h4>
+                  <h4>{{theatre.name}}</h4>
                 </div>
                 <div class="theatre-details">
                   <div class="ticket-info"><img src="../assets/icons/invoice.png" alt="Smiley face" height="30" width="30"></div>
@@ -24,7 +24,29 @@
 
               <div class="show-times">
                 <ul class="show-times-ul">
-                  <li class="show-times-li">
+                  <li *ngFor="let show of theatre.shows" class="show-times-li">
+                    <button class="time" id="time" value="10:45 AM">{{show.time}}</button>
+                    <div class="show-seat">
+                      <ul class="popup-ul">
+                        <li class="popup-li">
+                          <div class="price"> $ {{show.price}}</div>
+                          <div class="seat-type"> {{show.type}}</div>
+                          <div class="seat-availability"> {{show.seatsAvailable > 8 ? 'Available' : 'Filling Fast'}}</div>
+                        </li>
+                        <!-- <li class="popup-li">
+                          <div class="price"> CAD 90</div>
+                          <div class="seat-type"> Executive</div>
+                          <div class="seat-availability"> Available</div>
+                        </li>
+                        <li class="popup-li">
+                          <div class="price"> CAD 90</div>
+                          <div class="seat-type"> Premium</div>
+                          <div class="seat-availability"> Available</div>
+                        </li> -->
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- <li class="show-times-li">
                     <button class="time" id="time" value="10:45 AM">10:45 AM</button>
                     <div class="show-seat">
                       <ul class="popup-ul">
@@ -45,31 +67,9 @@
                         </li>
                       </ul>
                     </div>
-                  </li>
-                  <li class="show-times-li">
-                    <button class="time" id="time" value="10:45 AM">10:45 AM</button>
-                    <div class="show-seat">
-                      <ul class="popup-ul">
-                        <li class="popup-li">
-                          <div class="price"> CAD 90</div>
-                          <div class="seat-type"> Normal</div>
-                          <div class="seat-availability"> Available</div>
-                        </li>
-                        <li class="popup-li">
-                          <div class="price"> CAD 90</div>
-                          <div class="seat-type"> Executive</div>
-                          <div class="seat-availability"> Available</div>
-                        </li>
-                        <li class="popup-li">
-                          <div class="price"> CAD 90</div>
-                          <div class="seat-type"> Premium</div>
-                          <div class="seat-availability"> Available</div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
+                  </li> -->
 
-                  <li class="show-times-li">
+                  <!-- <li class="show-times-li">
                     <button class="time" id="time" value="10:45 AM">10:45 AM</button>
                     <div class="show-seat">
                       <ul class="popup-ul">
@@ -90,35 +90,35 @@
                         </li>
                       </ul>
                     </div>
-                  </li>
+                  </li> -->
 
                 </ul>
 
               </div>
-              <div class="selection-container" id="selection-container">
+              <div *ngFor="let show of theatre.shows"  class="selection-container" id="selection-container">
                 <div class="selection">
-                  <label>Normal</label>
+                  <label>{{show.type}}</label>
                   <input type="number" max="10" />
                 </div>
-                <div class="selection">
+                <!-- <div class="selection">
                   <label>Executive</label>
                   <input type="number" max="10" />
                 </div>
                 <div class="selection">
                   <label>Premium</label>
                   <input type="number" max="10" />
-                </div>
+                </div> -->
               </div>
 
               <div class="card-body book-button pay-button">
-                <button type="button" class="login btn btn-sm" routerLink="/pay">Pay</button>
+                <button type="button" class="login btn btn-sm" routerLink="/booking-summary">Pay</button>
               </div>
 
             </li>
 
 
 
-            <li class="theatre-li">
+            <!-- <li class="theatre-li">
               <div class="theatre">
                 <div class="theatre-name">
                   <h4>Cineplex Kitchener</h4>
@@ -220,7 +220,7 @@
               <div class="card-body book-button pay-button">
                 <button type="button" class="login btn btn-sm" routerLink="/pay">Pay</button>
               </div>
-            </li>
+            </li> -->
 
 
 

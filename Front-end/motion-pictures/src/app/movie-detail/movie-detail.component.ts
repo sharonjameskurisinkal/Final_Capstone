@@ -26,6 +26,7 @@ export class MovieDetailComponent implements OnInit {
         .then(movie => {
           console.log(movie);
           this.movieDetail = movie ;
+          this.movieService.selectedMovie = movie;
         });
 
     }

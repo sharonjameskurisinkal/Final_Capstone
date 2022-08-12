@@ -10,6 +10,8 @@ import { BookingSummaryComponent } from './booking-summary/booking-summary.compo
 import { PaymentComponent } from './payment/payment.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminMovieListComponent } from './admin-movie-list/admin-movie-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { AdminMovieListComponent } from './admin-movie-list/admin-movie-list.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
     HttpClientModule
   ],
   providers: [],

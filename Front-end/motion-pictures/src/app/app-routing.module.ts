@@ -5,6 +5,7 @@ import { BookingSummaryComponent } from './booking-summary/booking-summary.compo
 import { MovieBookingComponent } from './movie-booking/movie-booking.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [];
 
@@ -16,7 +17,8 @@ const routes: Routes = [];
       { path: 'login', component: AdminLoginComponent },
 
       { path: 'booking', component: MovieBookingComponent },
-      { path: 'pay', component: BookingSummaryComponent },
+      { path: 'booking-summary', component: BookingSummaryComponent },
+      { path: 'payment', component: PaymentComponent },
     ])],
   exports: [RouterModule]
 })
