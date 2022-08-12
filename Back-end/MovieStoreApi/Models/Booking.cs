@@ -19,6 +19,8 @@ namespace MovieStoreApi.Models
         public string movieId { get; set; }
         public string theatreName { get; set; }
 
+        public double? tax { get; set; }
+
         public string time { get; set; }
 
 
