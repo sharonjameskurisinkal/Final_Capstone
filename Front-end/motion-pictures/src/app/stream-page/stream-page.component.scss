@@ -1,0 +1,54 @@
+body {
+  background: #221;
+}
+
+#slidy-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 550px;
+}
+
+.spiderman {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.spiderman-row{
+    padding-top:20px;
+}
+
+.spiderman-div:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.col img {
+  border-radius: 25px;
+}
+
+.offer-col{
+    text-align:center;
+}
+.offer-row {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .offer-col {
+    padding-top:20px;
+  }
+  .spiderman-row {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+  }
+
+  .spiderman-div {
+    padding-top: 20px;
+  }
+}

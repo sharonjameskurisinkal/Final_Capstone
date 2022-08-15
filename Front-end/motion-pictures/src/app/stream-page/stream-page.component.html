@@ -1,1 +1,104 @@
-<p>stream-page works!</p>
+
+<div id="slidy-container">
+  <figure id="slidy">
+    <img src="../assets/stream/beast.jpg" alt="Bast">
+    <img src="../assets/stream/nope.jpg" alt="Nope">
+    <img src="../assets/stream/bullettrain.jpg" alt="Bullettrain">
+    <img src="../assets/stream/threethousand.jpg" alt="threethousand">
+  </figure>
+</div>
+
+
+<div class="container px-5 py-5">
+  <h2 class="main-heading">Spidey All The Way!</h2>
+  <div class="row spiderman-row">
+    <div class="col mx-1 spiderman-div"> <img class="spiderman card" src="../assets/stream/spiderman1.jpg" alt="spiderman1"></div>
+    <div class="col mx-1 spiderman-div"> <img class="spiderman card" src="../assets/stream/spiderman2.jpg" alt="spiderman2"></div>
+    <div class="col mx-1 spiderman-div"><img class="spiderman card" src="../assets/stream/spiderman3.jpg" alt="spiderman3"></div>
+    <div class="col mx-1 spiderman-div"><img class="spiderman card" src="../assets/stream/spiderman4.jpg" alt="spiderman4"></div>
+    <div class="col mx-1 spiderman-div"><img class="spiderman card" src="../assets/stream/spiderman5.jpg" alt="spiderman5"></div>
+  </div>
+</div>
+
+<div class="container px-3 py-3">
+  <h2 class="main-heading">Offers for you!</h2>
+  <div class="row offer-row">
+    <div class="col mx-1 offer-col">
+      <img class="offer-img" src="../assets/stream/supersaver.jpg" alt="supersaver">
+    </div>
+    <div class="col mx-1 offer-col">
+      <img class="offer-img" src="../assets/stream/bigblast.jpg" alt="bigblast">
+    </div>
+    <div class="col mx-1 offer-col">
+      <img class="offer-img" src="../assets/stream/bigblast.jpg" alt="bigblast">
+    </div>
+  </div>
+</div>
+
+  <div class="container px-5 py-5">
+    <h2 class="main-heading">Complete Jurassic Park Collection!</h2>
+    <div class="row spiderman-row">
+      <div class="col mx-1 spiderman-div"> <img class="spiderman card" src="../assets/stream/jurassic1.jpg" alt="jurassic1"></div>
+      <div class="col mx-1 spiderman-div"> <img class="spiderman card" src="../assets/stream/jurassic2.jpg" alt="jurassic2"></div>
+      <div class="col mx-1 spiderman-div"><img class="spiderman card" src="../assets/stream/jurassic3.jpg" alt="jurassic3"></div>
+      <div class="col mx-1 spiderman-div"><img class="spiderman card" src="../assets/stream/jurassic4.jpg" alt="jurassic4"></div>
+      <div class="col mx-1 spiderman-div"><img class="spiderman card" src="../assets/stream/jurassic5.jpg" alt="jurassic5"></div>
+    </div>
+  </div>
+
+  <script>
+
+
+    var timeOnSlide = 3,
+      timeBetweenSlides = 1,
+
+      animationstring = 'animation',
+      animation = false,
+      keyframeprefix = '',
+      domPrefixes = 'Webkit Moz O Khtml'.split(' '),
+      pfx = '',
+      slidy = document.getElementById("slidy");
+    if (slidy.style.animationName !== undefined) { animation = true; }
+
+    if (animation === false) {
+      for (var i = 0; i < domPrefixes.length; i++) {
+        if (slidy.style[domPrefixes[i] + 'AnimationName'] !== undefined) {
+          pfx = domPrefixes[i];
+          animationstring = pfx + 'Animation';
+          keyframeprefix = '-' + pfx.toLowerCase() + '-';
+          animation = true;
+          break;
+        }
+      }
+    }
+
+    if (animation === false) {
+    } else {
+      var images = slidy.getElementsByTagName("img"),
+        firstImg = images[0],
+        imgWrap = firstImg.cloneNode(false);
+      slidy.appendChild(imgWrap);
+      var imgCount = images.length,
+        totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1),
+        slideRatio = (timeOnSlide / totalTime) * 100,
+        moveRatio = (timeBetweenSlides / totalTime) * 100,
+        basePercentage = 100 / imgCount,
+        position = 0,
+        css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n";
+      css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+      css.innerHTML += "@" + keyframeprefix + "keyframes slidy {\n";
+      for (i = 0; i < (imgCount - 1); i++) {
+        position += slideRatio;
+        css.innerHTML += position + "% { left: -" + (i * 100) + "%; }\n";
+        position += moveRatio;
+        css.innerHTML += position + "% { left: -" + ((i + 1) * 100) + "%; }\n";
+      }
+      css.innerHTML += "}\n";
+      css.innerHTML += "#slidy { left: 0%; " + keyframeprefix + "transform: translate3d(0,0,0); " + keyframeprefix + "animation: " + totalTime + "s slidy infinite; }\n";
+      document.body.appendChild(css);
+    }
+
+
+  </script>

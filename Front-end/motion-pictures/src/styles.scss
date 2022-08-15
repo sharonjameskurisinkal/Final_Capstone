@@ -200,6 +200,10 @@ html, body {
   }
 }
 
+.list-group-item{
+    font-weight:500;
+}
+
 @media screen and (min-width: 768px) {
   .movie_header {
     width: 60%;
