@@ -12,6 +12,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminMovieListComponent } from './admin-movie-list/admin-movie-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { StreamPageComponent } from './stream-page/stream-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ToastrModule } from 'ngx-toastr';
     BookingSummaryComponent,
     PaymentComponent,
     AdminLoginComponent,
-    AdminMovieListComponent
+    AdminMovieListComponent,
+    ContactUsComponent,
+    StreamPageComponent
   ],
   imports: [
     BrowserModule,
