@@ -8,6 +8,8 @@ import { environment } from '../environments/environment'
 export class MovieService {
   apiUrl = environment.apiURL;
   selectedMovie : any;
+  selectedShow : any;
+  selectedTheatre : any;
 
   constructor(private http: HttpClient) { }
   getMovies(): Promise<void | any[]> {
