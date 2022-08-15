@@ -48,11 +48,18 @@ margin:auto;
 .test-page-content{
     margin-top: 12%;  
 }
-
-.movie-nav{
-    margin-left: 2%;
-    cursor: pointer;
-    color: white !important;
+.nav-logo {
+  color: white !important;
+  
+  
+}
+.movie-nav {
+  margin-left: 2%;
+  cursor: pointer;
+  color: white !important;
+  border-radius: 6px;
+  padding: 10px;
+  background:black;
 }
 .main-heading{
     color:#ffff;

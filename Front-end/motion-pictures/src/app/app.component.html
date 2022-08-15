@@ -113,11 +113,12 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img width="40"
-       alt="Angular Logo"
-       src="../assets/images/logo64.png" />
-  <span>Motion Pictures</span>
-  <a class="movie-nav" [routerLink]="['']">Movies</a>
+  <a class="nav-logo" [routerLink]="['']">
+    <img width="40"
+         alt="Angular Logo"
+         src="../assets/images/logo64.png" />
+    <span>Motion Pictures</span>
+  </a>
   <a class="movie-nav" [routerLink]="['/stream']">Stream</a>
   <a class="movie-nav" [routerLink]="['/contactus']">Contact us</a>
   <div class="spacer"></div>
