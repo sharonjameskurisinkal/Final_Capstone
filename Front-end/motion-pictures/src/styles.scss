@@ -233,7 +233,7 @@ html, body {
   }
 
   .movie-card {
-    width: 20rem !important;
+    width: 25rem !important;
   }
   .main-heading{
       text-align:center;
@@ -488,3 +488,9 @@ ul {
     width: 50%;  
 
 }
+
+@media screen and (max-width: 768px) {
+  footer .container{
+      text-align:center;
+  }
+  }

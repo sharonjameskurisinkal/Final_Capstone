@@ -36,9 +36,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-
+  .background-spiderman {
+    background: #151414;
+  }
   .offer-col {
-    padding-top:20px;
+    padding-top: 20px;
   }
   .spiderman-row {
     display: flex;
