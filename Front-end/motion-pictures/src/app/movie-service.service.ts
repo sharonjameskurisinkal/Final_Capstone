@@ -10,6 +10,7 @@ export class MovieService {
   selectedMovie : any;
   selectedShow : any;
   selectedTheatre : any;
+  paymentDetails : any;
 
   constructor(private http: HttpClient) { }
   getMovies(): Promise<void | any[]> {

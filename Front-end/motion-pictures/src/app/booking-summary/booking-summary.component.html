@@ -3,19 +3,19 @@
     <div class="mainRow">
       <div class="col-lg-6 col-md-4 col-sm-12">
         <div class="view view-cascade overlay text-center">
-          <img class="card-img-top" src="../../assets/movies/superpetsbackground.jpg" alt="movie">
+          <img class="card-img-top" [src]="movieDetail?.background_image" alt="movie">
         </div>
       </div>
       <div class="col-lg-6 col-md-8 col-sm-12">
         <h2 class="main-heading summary-head">Booking Summary</h2>
-        <p class="item">Ticket Cost <span class="float-right text1">30</span></p>
-        <p class="item">Convenience Fee<span class="float-right text1">$1,240</span></p>
-        <p class="item">Subtotal<span class="float-right text1">Free</span></p>
-        <p class="item">Promo Code<span class="float-right text1">-$100</span></p>
-        <p class="total"><strong>Total</strong><span class="float-right totalText1">$<span class="totalText2">1,140</span></span></p>
+        <p class="item">Ticket Cost <span class="float-right text1">$ {{ticketCost}}</span></p>
+        <p class="item">Convenience Fee<span class="float-right text1">$ {{convenienceFee}}</span></p>
+        <p class="item">Tax<span class="float-right text1">$ {{tax}}</span></p>
+        <!-- <p class="item">Promo Code<span class="float-right text1">-$100</span></p> -->
+        <p class="total"><strong>Total</strong><span class="float-right totalText1">$<span class="totalText2">{{ticketCost + convenienceFee +tax}}</span></span></p>
         
         <div class="card-body book-button">
-          <button type="button" class="login btn btn-sm" routerLink="/">Proceed to Payment</button>
+          <button type="button" class="login btn btn-sm" routerLink="/payment">Proceed to Payment</button>
         </div>
       </div>
     </div>

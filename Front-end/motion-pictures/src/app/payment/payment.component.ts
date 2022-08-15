@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent implements OnInit {
-  public formGroup: FormGroup | undefined;
+  public formGroup: FormGroup ;
   public showPaymentCard = false;
 
   constructor(private fb: FormBuilder,private toastr: ToastrService) {
