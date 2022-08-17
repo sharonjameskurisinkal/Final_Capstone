@@ -1,0 +1,55 @@
+table{
+    background-color: white;
+}
+.bannerimage {
+    width: 100%;
+    padding-top: 40px;
+    margin: 0;
+}
+
+.table_styling{
+    border: 1px solid gray;
+}
+.student_table th{
+    background-color: #1d386d;
+    color: white;
+}
+.student_table th, td{
+    height: 4em;
+}
+.add_student{
+    margin: auto;
+    margin-top: 1em;
+}
+.st_table{
+    margin: 4em auto;
+}
+.student_gallery_text{
+    margin: auto;
+}
+
+.about_us{
+    margin: 4em auto;
+}
+.about_us h2{
+    margin-bottom: 1em;
+}
+.other_studies{
+    margin: 4em auto;
+}
+
+.footer_styling{
+    background-color: #1d386d;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+}
+.footer_styling p{
+    margin-bottom: 0;
+}
+
+.other_studies h4{
+    margin-top: 0.5em;
+}

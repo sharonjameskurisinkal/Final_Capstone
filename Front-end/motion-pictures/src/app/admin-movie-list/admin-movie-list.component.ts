@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../movie-service.service';
 
 @Component({
   selector: 'app-admin-movie-list',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-movie-list.component.scss']
 })
 export class AdminMovieListComponent implements OnInit {
+  public movies: any[] = [];
 
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.movieService
+      .getMovies()
+      .then((movies) => {
+        console.log(movies);
+        this.movies = movies as any[];
+      });
+  }
+
+  deleteMovie(movieId:any){
+
   }
 
 }

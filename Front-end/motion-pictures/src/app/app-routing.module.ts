@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminMovieListComponent } from './admin-movie-list/admin-movie-list.component';
 import { BookingSummaryComponent } from './booking-summary/booking-summary.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MovieBookingComponent } from './movie-booking/movie-booking.component';
@@ -19,7 +20,7 @@ const routes: Routes = [];
       { path: 'login', component: AdminLoginComponent },
       { path: 'stream', component: StreamPageComponent },
       { path: 'contactus', component: ContactUsComponent },
-
+      { path: 'admin-movie-list', component: AdminMovieListComponent },
       { path: 'booking', component: MovieBookingComponent },
       { path: 'booking-summary', component: BookingSummaryComponent },
       { path: 'payment', component: PaymentComponent },
