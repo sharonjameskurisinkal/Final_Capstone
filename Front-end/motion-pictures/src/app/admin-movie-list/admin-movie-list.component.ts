@@ -18,6 +18,7 @@ export class AdminMovieListComponent implements OnInit {
         console.log(movies);
         this.movies = movies as any[];
       });
+
   }
 
   deleteMovie(movieId:any){

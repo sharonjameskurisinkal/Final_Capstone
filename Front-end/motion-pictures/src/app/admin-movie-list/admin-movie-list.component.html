@@ -6,7 +6,7 @@
 				<tr>
 					<th class="align-middle">Name</th>
 					<th class="align-middle">Rating</th>
-					<th class="align-middle">Description</th>
+					<th class="align-middle">Genre</th>
 					<th class="align-middle">Duration</th>
 					<th class="align-middle">Release Date</th>
 					<th></th>
@@ -16,31 +16,31 @@
 				<tr *ngFor = "let movie of movies;" class="align-middle">
 					<td class="align-middle">{{movie.name}}</td>
 					<td class="align-middle">{{movie.rating}}</td>
-					<td class="align-middle">{{movie.description}}</td>
+					<td class="align-middle" > <span *ngFor="let gen of movie.genre" >{{gen}} &nbsp;</span></td>
 					<td class="align-middle">{{movie.duration}}</td>
 					<td class="align-middle">{{movie.release_date}}</td>
 					<td class="align-middle">
-						<a routerLink="/students/{{movie.id}}" style="color: black;">
-							<img src="../assets/icons/view-icon.png" title="view student details" alt="View" width="auto" height="24">
-						</a>
+						<!-- <a routerLink="/admin-movie-edit/{{movie.id}}" style="color: black;">
+							<img src="../assets/icons/view-icon.png" title="view movie details" alt="View" width="auto" height="24">
+						</a> -->
 					</td>
 					<td class="align-middle">
-						<a routerLink="/update/{{movie.id}}" style="color: black;">
-							<img src="../assets/icons/edit-icon.png" title="edit student details" alt="Edit" width="auto" height="24">
+						<a routerLink="/admin-movie-edit/{{movie.id}}" style="color: black;">
+							<img src="../assets/icons/edit-icon.png" title="edit movie details" alt="Edit" width="auto" height="24">
 						</a>
 					</td>
 					<td class="align-middle">
 						<a (click)="deleteMovie(movie.id)" style="color: black;">
-							<img src="../assets/icons/delete-icon.png" title="delete student details" alt="Delete" width="auto" height="24">
+							<img src="../assets/icons/delete-icon.png" title="delete movie" alt="Delete" width="auto" height="24">
 						</a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	<div class="row ">
+	<!-- <div class="row ">
 		<div routerLink="/create" class="add_student">
 			<button class=" btn " style="background-color: #1d386d; color: white;">Add Student</button>
 		</div>
-	</div>
+	</div> -->
 </div>
