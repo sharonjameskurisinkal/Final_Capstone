@@ -27,6 +27,11 @@ export class MovieService {
       .catch(this.handleError);
   }
 
+  saveTicket(ticket: any): Promise<void | any> {
+    return this.http.post(this.apiUrl+'/api/Booking/', ticket).toPromise()
+      .then(response => response as any).catch(this.handleError);
+  }
+
   private handleError(error: any) {
     console.log("error");
   }

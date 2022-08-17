@@ -11,6 +11,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminMovieListComponent } from './admin-movie-list/admin-movie-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { StreamPageComponent } from './stream-page/stream-page.component';
@@ -32,6 +33,7 @@ import { StreamPageComponent } from './stream-page/stream-page.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     FormsModule,
     ToastrModule.forRoot(),
     HttpClientModule
