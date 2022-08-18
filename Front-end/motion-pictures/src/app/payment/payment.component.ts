@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { MovieService } from '../movie-service.service';
 
@@ -17,7 +18,7 @@ export class PaymentComponent implements OnInit {
   selectedShow: any;
   paymentDetails: any;
 
-  constructor(private fb: FormBuilder, private toastr: ToastrService, public movieService: MovieService,) {
+  constructor(private fb: FormBuilder, private toastr: ToastrService, public movieService: MovieService,private router: Router) {
     this.formGroup = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.minLength(9), Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
@@ -49,7 +50,6 @@ export class PaymentComponent implements OnInit {
       this.formGroup.controls['email'].disable();
       this.formGroup.controls['phone'].disable();
     } else {
-      console.log('test');
 
       this.toastr.error("Enter valid Email and Phone number.")
 
@@ -76,11 +76,12 @@ export class PaymentComponent implements OnInit {
       .saveTicket(ticketData)
       .then(movies => {
         this.toastr.success("Your movie tickets are booked. Enjoy your show.");
+        this.router.navigate(['']);
       });
 
     
     }else{
-      this.toastr.success("All fields are required and enter valid data.");
+      this.toastr.error("All fields are required and enter valid data.");
 
     }
 
