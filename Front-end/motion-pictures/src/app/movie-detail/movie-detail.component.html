@@ -3,7 +3,7 @@
   <div class="info_section">
     <div class="movie_header">
       <img class="locandina" [src]="movieDetail?.image" />
-      <h1>{{movieDetail?.name}}<span> {{movieDetail?.rating}}</span></h1>
+      <h1>{{movieDetail?.name}}<span> [ {{movieDetail?.rating}} ]</span></h1>
       <h4>{{movieDetail?.release_date}}</h4>
       <span class="minutes">{{movieDetail?.duration}}</span>
       <p class="type" *ngFor="let gen of movieDetail?.genre;let i = index"><span *ngIf="i !== 0">, </span>{{gen}} </p>
