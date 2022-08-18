@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { StreamPageComponent } from './stream-page/stream-page.component';
+import { AdminMovieCreateUpdateComponent } from './admin-movie-create-update/admin-movie-create-update.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StreamPageComponent } from './stream-page/stream-page.component';
     AdminLoginComponent,
     AdminMovieListComponent,
     ContactUsComponent,
-    StreamPageComponent
+    StreamPageComponent,
+    AdminMovieCreateUpdateComponent
   ],
   imports: [
     BrowserModule,

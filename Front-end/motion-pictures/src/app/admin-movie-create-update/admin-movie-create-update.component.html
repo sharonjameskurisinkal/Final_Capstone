@@ -1,0 +1,59 @@
+<div class="container content">
+    <div class="list-top">
+      <div class="border-form">
+      <div  *ngIf="IsCreate" class="bl-color form-heading">Add New Student</div>
+      <div  *ngIf="!IsCreate" class="bl-color form-heading">Edit Movie Details</div>
+      <div class="form-group">
+        <form [formGroup]="formGroup">
+          <div class="row">
+            <div class="col-md-6">
+              <label class="bl-color form-label" for="name">Name:</label>
+              <input class="form-control" formControlName="name" id="name" title="name">
+            </div>
+            <div class="col-md-6">
+              <label class="bl-color form-label"for="rating">Rating:</label>
+              <input class="form-control" formControlName="rating" id="rating" title="rating" >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="bl-color form-label" for="release_date">Release Date:</label>
+              <input class="form-control" formControlName="release_date" id="release_date" title="release_date">
+            </div>
+            <div class="col-md-6">
+              <label class="bl-color form-label"for="duration">Duration:</label>
+              <input class="form-control" formControlName="duration" id="duration" title="duration" >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label class="bl-color form-label" for="description">Description:</label>
+              <textarea class="form-control" formControlName="description" id="description" title="description">
+              </textarea>
+              <!-- <mat-error *ngIf="isClicked && (formGroup.controls['student_email'].hasError('required') || 
+              formGroup.controls['student_email'].hasError('email'))">
+                Please enter a valid student email.
+              </mat-error> -->
+            </div>
+        
+          </div>
+       
+          
+        
+  
+        
+          
+       
+        </form>
+        <button class="btn form-btn btn-secondary margin-left-2" (click)="cancelMovieDetails()">Cancel
+        </button>
+        <button  *ngIf="IsCreate" class="btn form-btn-primary btn-primary " (click)="createOrUpdateMovieDetails()">Add
+        </button>
+    
+        <button  *ngIf="!IsCreate" class="btn form-btn-primary btn-primary " (click)="createOrUpdateMovieDetails()">Update
+        </button>
+    
+      </div>
+    </div>
+    </div>
+  </div>

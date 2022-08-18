@@ -38,6 +38,15 @@ export class MovieService {
       .then(response => response as any).catch(this.handleError);
   }
 
+  updateMovie(movie: any): Promise<void | any> {
+    return this.http.put(this.apiUrl + '/api/Movies/'+movie.id, movie).toPromise()
+      .then(response => response as any).catch(this.handleError);
+  }
+  deleteMovie(movieId: any): Promise<void | any> {
+    return this.http.delete(this.apiUrl + '/api/Movies/'+movieId).toPromise()
+      .then(response => response as any).catch(this.handleError);
+  }
+
   private handleError(error: any) {
     console.log(error.error.message);
 
